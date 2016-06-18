@@ -1,4 +1,4 @@
-# Push notifications frontend
+# Push Notifications Frontend
 Mobile push notifications made easy. Single service for multiple OS and devices.
 
 ## 1. Live version
@@ -21,6 +21,8 @@ Backend part is available here [push-notifications-service](https://github.com/b
 ### Local
 * Install npm package manager
 * `sudo npm install -g gulp bower`
+* `git clone https://github.com/btrajkovski/push-notifications-frontend.git`
+* `cd push-notifications-frontend`
 * `npm install`
 * `bower install`
 * `gulp`
