@@ -1,0 +1,56 @@
+<div id="main-login-card" layout="column">
+  <md-card class="md-padding">
+
+    <md-card-title>
+      <md-card-title-text>
+        <h1>Push Notifications Service</h1>
+      </md-card-title-text>
+    </md-card-title>
+
+    <p>Send push notifications to Android and iOS devices using this free service</p>
+
+    <div id="social-login-form">
+      <div>
+        <md-button ng-href="/auth/google" id="btn-google" class="md-raised">
+          <i class="fa fa-google"></i>
+          Sign in with Google
+        </md-button>
+      </div>
+
+      <div>
+        <md-button ng-href="/auth/facebook" id="btn-facebook" class="md-raised">
+          <i class="fa fa-facebook"></i>
+          Sign in with Facebook
+        </md-button>
+      </div>
+
+      <div>
+        <md-button ng-href="/auth/twitter" id="btn-twitter" class="md-raised">
+          <i class="fa fa-twitter"></i>
+          Sign in with twitter
+        </md-button>
+      </div>
+    </div>
+
+    <p><a class="btn btn-primary btn-lg" ng-click="isInfoOpen = !isInfoOpen">Learn more</a></p>
+
+    <div ng-show="isInfoOpen">
+      <ul>
+        <li>
+          Support for both Android and iOS devices from one place
+        </li>
+        <li>
+          Multiple applications for same user
+        </li>
+        <li>
+          Support for unlimited number of devices, push notifications and applications
+        </li>
+        <li>
+          Scheduled notifications
+        </li>
+      </ul>
+    </div>
+
+  </md-card>
+</div>
+

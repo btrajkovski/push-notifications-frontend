@@ -1,0 +1,62 @@
+<md-content layout-gt-sm="row" layout-padding="10">
+  <form name="appForm" ng-submit="save()" enctype="multipart/form-data">
+    <div layout-gt-xs="row">
+      <md-input-container class="md-block" flex-gt-xs>
+        <h2 ng-if="!editApplication">Crete New Application</h2>
+        <h2 ng-if="editApplication">Edit existing Application</h2>
+      </md-input-container>
+    </div>
+
+    <div layout-gt-xs="row">
+      <md-input-container class="md-block" flex-gt-xs>
+        <label>Title</label>
+        <input ng-model="application.name" required/>
+      </md-input-container>
+    </div>
+    <div layout-gt-xs="row">
+      <md-input-container class="md-block" flex-gt-xs>
+        <label>GCM API Key</label>
+        <input ng-model="application.gcmkey"/>
+      </md-input-container>
+    </div>
+
+    <div layout-gt-xs="row">
+      <md-input-container class="md-block" flex-gt-xs>
+        <label>Apple certificate file</label>
+        <input type="file" ng-model="application.appleCertificate.file" placeholder="file" ngf-select/>
+      </md-input-container>
+    </div>
+    <div layout-gt-xs="row">
+      <md-input-container class="md-block" flex-gt-xs flex="70">
+        <label>Apple certificate password</label>
+        <input type="password" ng-model="application.appleCertificate.password"/>
+        <!--<label>Apple certificate is production ?</label>-->
+
+      </md-input-container>
+
+      <md-input-container flex="30">
+        <!--<label>Is production?</label>-->
+        <md-checkbox ng-model="application.appleCertificate.isProduction" aria-label="Apple is production certificate">
+          Is production?
+        </md-checkbox>
+      </md-input-container>
+    </div>
+
+    <div layout-gt-xs="row">
+      <md-input-container class="md-block" flex-gt-xs>
+        <md-contact-chips flex
+                          ng-model="selectedUsers"
+                          md-contacts="querySearch($query)"
+                          md-contact-name="fullName"
+                          md-contact-image="imageUrl"
+                          md-highlight-flags="g"
+                          md-require-match="false">
+        </md-contact-chips>
+        <label>Add other users</label>
+      </md-input-container>
+    </div>
+
+    <input type="submit" class="md-raised md-button md-primary" value="Save">
+    <input type="button" class="md-raised md-button md-warn" ng-click="hide()" value="Cancel">
+  </form>
+</md-content>

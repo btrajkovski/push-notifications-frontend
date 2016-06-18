@@ -1,0 +1,27 @@
+{
+  "name": "push-notifications-frontend",
+  "version": "1.0.0",
+  "description": "Push Notification Frontend",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Bojan Trajkovski",
+  "license": "MIT",
+  "dependencies": {
+    "bower": "^1.7.7",
+    "eslint": "^2.2.0",
+    "eslint-plugin-angular": "^1.0.0",
+    "git-rev": "^0.2.1",
+    "gulp": "^3.9.1",
+    "gulp-angular-templatecache": "^1.8.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-connect": "^2.2.0",
+    "gulp-css-rebase-urls": "^0.0.5",
+    "gulp-eslint": "^2.0.0",
+    "gulp-rev-append": "^0.1.6",
+    "proxy-middleware": "^0.15.0"
+  },
+  "devDependencies": {},
+  "keywords": []
+}

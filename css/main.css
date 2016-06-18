@@ -1,0 +1,150 @@
+#sidebar {
+  background-color: #424242;
+}
+
+/*.login-layout md-toolbar {*/
+  /*background-color: transparent;*/
+/*}*/
+
+.login-layout {
+  background: url(../images/welcome_bg.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.login-layout #sidebar {
+  display: none;
+}
+
+.other-layout {
+  background-color: #e8e8e8;
+}
+
+#btn-google {
+  background: #d50f25;
+  color: white;
+}
+
+#btn-facebook {
+  background: #3b5998;
+  color: white;
+}
+
+#btn-twitter {
+  background-color: #55acee;
+  color: white;
+}
+
+#social-login-form {
+  text-transform: capitalize;
+  text-align: center;
+}
+
+#social-login-form a {
+  min-width: 200px;
+}
+
+#nav-user-info {
+  float: right;
+  margin-right: 10px;
+  list-style-type: none;
+}
+
+#nav-user-avatar {
+  margin: 5px 10px;
+  position: relative;
+
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+
+  -webkit-box-shadow: 0 0 0 3px #fff, 0 0 0 4px #999, 0 2px 5px 4px rgba(0,0,0,.2);
+  -moz-box-shadow: 0 0 0 3px #fff, 0 0 0 4px #999, 0 2px 5px 4px rgba(0,0,0,.2);
+  box-shadow: 0 0 0 1px #00bcd4, 0 0 0 2px #00bcd4, 0 2px 7px 2px rgba(0,0,0,.2);
+}
+
+.nav-user-text {
+  margin: 0 5px;
+  align-items: center;
+  justify-content: flex-end;
+  color: #00bcd4;
+}
+
+md-content {
+  background-color: #F9F9F9;
+}
+
+.nav-container {
+  height: 60px;
+}
+
+#form-add-application label {
+  width: 150px;
+}
+
+#form-add-application input {
+  width: 250px;
+}
+
+.login-layout #content  {
+  background-color: transparent;
+  justify-content: center;
+}
+
+#main-login-card {
+  width: 500px;
+}
+
+#sidebar {
+  max-width: 350px;
+}
+
+#sidebar a {
+  /*padding: 0;*/
+  padding: 5px 5px;
+  color: #E7E7E7;
+  margin: 0;
+  text-align: left;
+}
+
+#sidebar .active {
+  background-color: #353535 !important;
+}
+
+#sidebar i {
+  margin: 0 10px 0 10px;
+}
+
+#toolbar {
+  background-color: white;
+  color: #404040;
+  -webkit-box-shadow: 0 0 0 3px #fff, 0 0 0 4px #999, 0 2px 5px 4px rgba(0,0,0,.2);
+  -moz-box-shadow: 0 0 0 3px #fff, 0 0 0 4px #999, 0 2px 5px 4px rgba(0,0,0,.2);
+  box-shadow: 0 0 0 4px #fff, 0 0 0 4px #999, 0 2px 5px 4px rgba(0,0,0,.2);
+}
+
+#toolbar-path {
+  font-size: medium;
+  color: darkgray;
+}
+
+.path-link {
+  color: cornflowerblue !important;
+}
+
+.truncate {
+  max-width: 250px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+#options-icon {
+  color: #424242;
+}
+
+.action-item {
+  cursor: pointer !important;
+  padding: 5px;
+}

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link rel="icon" href="/images/favicon.ico" sizes="16x16 32x32 48x48 64x64"
+        type="image/vnd.microsoft.icon">
+
+  <title>Push Notifications</title>
+
+  <!-- Material Design fonts -->
+  <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Roboto:300,400,500,700">
+  <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/icon?family=Material+Icons">
+
+
+  <!-- Concatenated CSS -->
+  <link href="/dest/lib.css?rev=ae961805d8c2d527483489a4cd4803f2" rel="stylesheet">
+  <link href="/dest/app.css?rev=4f31fbc93f03d45bc5a01aa55864af8a" rel="stylesheet">
+
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+</head>
+
+<body ng-app="push-notifications-frontend"  class="{{bodyClass}}" ng-cloak layout="row">
+
+<md-sidenav md-component-id="left" ui-view="sidebar" id="sidebar" layout="column" class="sidenav1" md-is-locked-open="$mdMedia('gt-md')"></md-sidenav>
+<div  class="main-page container" layout="column" flex>
+  <div ui-view="navbar"></div>
+  <md-content class="md-padding" layout-xs="column" layout="row" flex id="content">
+    <div ui-view="main"></div>
+  </md-content>
+</div>
+
+<!--<md-sidenav layout="column" class="sidenav1" md-is-locked-open='true'>-->
+  <!--SideNav-->
+<!--</md-sidenav>-->
+
+<!--<md-content flex layout="column">-->
+  <!--<ng-view>-->
+    <!--View Content-->
+  <!--</ng-view>-->
+<!--</md-content>-->
+
+
+<!-- Concatenated libraries -->
+<script src="/dest/lib.js?rev=1fbe976e9c6ee2d07e7a70bb47a4c205"></script>
+<!-- Concatenated application -->
+<script src="/dest/src.js?rev=90f6cc1aaf1701c9be04df1274b9c63a"></script>
+<!-- All html templates -->
+<script src="/dest/templates.js?rev=b559eb41b9b144c661ce13ed5f32f6c6"></script>
+
+<!--<script type="text/javascript">$.material.init()</script>-->
+
+</body>
+</html>

@@ -1,0 +1,59 @@
+<h1>
+  Devices
+</h1>
+
+<div>
+  <i class="material-icons action-item">search</i>
+  <md-input-container>
+    <label>Search</label>
+    <input ng-model="table.filter">
+  </md-input-container>
+</div>
+
+<md-table-container>
+  <table md-table multiple md-progress="promise" flex>
+    <thead md-head md-head md-order="table.order">
+    <tr md-row>
+      <th md-column md-order-by="deviceToken">
+        Device Token
+      </th>
+      <th md-column md-order-by="deviceID">
+        Device ID
+      </th>
+      <th md-column md-order-by="mobileOS">
+        Mobile OS
+      </th>
+      <th md-column md-order-by="application.name">
+        Application
+      </th>
+      <th md-column md-order-by="receiveNotification">
+        Receive Notifications
+      </th>
+      <th md-column>
+        Actions
+      </th>
+    </tr>
+    </thead>
+
+    <tbody md-body>
+    <tr md-row ng-repeat="device in devices | filter: table.filter | orderBy: table.order | limitTo: table.limit: (table.page - 1) * table.limit" layout-align="center end">
+      <td md-cell class="truncate"> {{ device.deviceToken}}</td>
+      <td md-cell class="truncate"> {{ device.deviceID}}</td>
+      <td md-cell> {{ device.mobileOS}}</td>
+      <td md-cell> {{ device.application.name}}</td>
+      <td md-cell class="truncate" layout-align="center">
+        <md-checkbox ng-model="device.receiveNotification" aria-label="Device receive notification?">
+        </md-checkbox>
+      </td>
+      <td md-cell>
+        <i class="material-icons action-item" ng-click="save(device)">done</i>
+        <!--<md-button class="md-raised md-default" ng-click="(save($index))">Save</md-button>-->
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</md-table-container>
+
+<md-table-pagination md-limit="table.limit" md-page="table.page"
+                     md-total="{{devices.length}}" md-limit-options="table.limitOptions"
+                     md-page-select></md-table-pagination>

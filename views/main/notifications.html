@@ -1,0 +1,58 @@
+<h1>
+  Notifications
+</h1>
+<div>
+  <md-button class="md-fab-top-right md-fab" ng-click="addPrompt()">
+    <i class="fa fa-plus"></i>
+  </md-button>
+</div>
+
+<div>
+  <i class="material-icons action-item">search</i>
+  <md-input-container>
+    <label>Search</label>
+    <input ng-model="table.filter">
+  </md-input-container>
+</div>
+
+<md-table-container>
+  <table md-table multiple md-progress="promise" flex>
+    <thead md-head md-order="table.order">
+    <tr md-row>
+      <th md-column md-order-by="title">
+        Title
+      </th>
+      <th md-column md-order-by="content">
+        Content
+      </th>
+      <th md-column md-order-by="notificationType">
+        Type
+      </th>
+      <th md-column md-order-by="sendDate">
+        Send date
+      </th>
+      <th md-column>
+        Actions
+      </th>
+    </tr>
+    </thead>
+
+    <tbody md-body>
+    <tr md-row
+        ng-repeat="notification in notifications | filter: table.filter | orderBy: table.order | limitTo: table.limit: (table.page - 1) * table.limit">
+      <td md-cell> {{ notification.title}}</td>
+      <td md-cell class="truncate"> {{ notification.content}}</td>
+      <td md-cell> {{ notification.notificationType}}</td>
+      <td md-cell> {{ notification.sendDate}}</td>
+      <td md-cell>
+        <i class="material-icons action-item" ng-click="delete(notification, $event)">delete</i>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+
+</md-table-container>
+
+<md-table-pagination md-limit="table.limit" md-page="table.page"
+                     md-total="{{notifications.length}}" md-limit-options="table.limitOptions"
+                     md-page-select></md-table-pagination>

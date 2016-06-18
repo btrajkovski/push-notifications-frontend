@@ -1,0 +1,5 @@
+<div id="toolbar-path">
+  <a class="path-link" href="{{step.ncyBreadcrumbLink}}" ng-repeat="step in steps | limitTo:(steps.length-1)">{{step.ncyBreadcrumbLabel}}
+    > </a>
+  <span ng-repeat="step in steps | limitTo:-1">{{step.ncyBreadcrumbLabel}}</span>
+</div>

@@ -1,0 +1,57 @@
+<div>
+  <h1>Applications</h1>
+</div>
+<div>
+  <md-button class="md-fab-top-right md-fab" ng-click="addPrompt()" aria-label="add application">
+    <i class="fa fa-plus"></i>
+  </md-button>
+</div>
+
+<div>
+  <i class="material-icons action-item">search</i>
+  <md-input-container>
+    <label>Search</label>
+    <input ng-model="table.filter">
+  </md-input-container>
+</div>
+
+<md-table-container>
+  <table md-table multiple md-progress="promise" flex>
+    <thead md-head md-order="table.order">
+    <tr md-row>
+      <th md-column md-order-by="name">
+        Name
+      </th>
+      <th md-column md-order-by="appIdentifier">
+        Identifier
+      </th>
+      <th md-column md-order-by="gcmkey">
+        GCM Key
+      </th>
+      <th md-column md-order-by="appleCertificate">
+        Apple certificate
+      </th>
+      <th md-column>
+        Actions
+      </th>
+    </tr>
+    </thead>
+
+    <tbody md-body>
+    <tr md-row ng-repeat="application in applications | filter: table.filter | orderBy: table.order | limitTo: table.limit: (table.page - 1) * table.limit">
+      <td md-cell flex="5"> {{ application.name}}</td>
+      <td md-cell flex="5"> {{ application.appIdentifier}}</td>
+      <td md-cell flex="5"> {{ application.gcmkey}}</td>
+      <td md-cell flex="5"> <md-checkbox ng-checked="application.appleCertificate != null" disabled  aria-label="Apple certificate"></md-checkbox> </td>
+      <td md-cell flex="5">
+        <i class="material-icons action-item" ng-click="delete(application, $event)">delete</i>
+        <i class="material-icons action-item" ng-click="editDialog(application, $event)">edit</i>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</md-table-container>
+
+<md-table-pagination md-limit="table.limit" md-page="table.page"
+                     md-total="{{applications.length}}" md-limit-options="table.limitOptions"
+                     md-page-select></md-table-pagination>

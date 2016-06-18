@@ -1,0 +1,9 @@
+<div layout-padding style="margin: 0 auto;">
+  <img src="http://cleartheairchicago.com/files/2014/06/logo-placeholder.jpg" height="150px" />
+</div>
+
+<md-button ng-repeat="i in $root.menuItems" ui-sref="{{ i.state }}"  ng-class="{'active': $root.state == i.state}" ng-click="toggleSidemenu()">
+  <i class="fa fa-fw {{ i.icon }}"></i>
+  {{ i.name | translate }}
+  <!--{{ $state.current.name == i.state.name }}-->
+</md-button>

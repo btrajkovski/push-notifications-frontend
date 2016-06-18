@@ -1,0 +1,23 @@
+<md-toolbar layout="row" id="toolbar" flex>
+  <div class="md-toolbar-tools">
+
+    <a id="hamburger-menu" class="layout-padding" ng-click="toggleSidemenu()" hide-gt-md=""> <i class="fa fa-navicon"></i> </a>
+    <div ncy-breadcrumb></div>
+    <div flex></div>
+
+    <img id="nav-user-avatar" ng-src="{{ $root.user.imageUrl }}" alt="User avatar"/>
+    <span class="nav-user-text" > {{ $root.user.firstName }} {{ $root.user.lastName }}</span>
+    <md-menu>
+      <!-- Trigger element is a md-button with an icon -->
+      <md-button ng-click="$mdOpenMenu($event)" class="md-icon-button" aria-label="Open sample menu">
+        <md-icon ><i class="fa fa-ellipsis-v" aria-hidden="true" id="options-icon"></i></md-icon>
+      </md-button>
+      <md-menu-content>
+        <md-menu-item><md-button ui-sref="root.api">API configuration</md-button></md-menu-item>
+        <md-menu-item><md-button ng-click="logout($event)">Logout</md-button></md-menu-item>
+      </md-menu-content>
+    </md-menu>
+  </div>
+</md-toolbar>
+
+
