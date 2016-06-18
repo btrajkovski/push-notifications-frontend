@@ -14,7 +14,7 @@ Backend part is available here [push-notifications-service](https://github.com/b
 * Multiple applications for same user
 * Support for unlimited number of devices, push notifications and applications
 * Scheduled notifications
-* Public API for registering devices and seding notifications
+* Public API for registering devices and sending notifications
 * List all registered devices
 
 ## 4. How to run
